@@ -6,7 +6,5 @@
         "Codeium.codeium",
         "aaron-bond.better-comments",
         "tamasfe.even-better-toml",
-        "ms-python.black-formatter",
-        "ms-python.vscode-pylance"
     ]
 }
