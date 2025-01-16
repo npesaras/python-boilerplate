@@ -7,35 +7,26 @@ This repository provides initial setup for your python development. Using UV Pyt
 
 ## Installation
 
-Install uv with our standalone installers:
+>*note: I am using windows operating system(OS). This guide is intended for windows OS. If you are using other OS, please refer to the official uv python docs.*
 
-```bash
-# On macOS and Linux.
-curl -LsSf https://astral.sh/uv/install.sh | sh
+<br>
+
+**Set the powershell execution policy for the current user.**
+
+```powershell
+Set-ExecutionPolicy -ExecutionPolicy AllSigned -Scope CurrentUser
 ```
 
-```bash
-# On Windows.
+**Use `irm` to download the script and execute it with `iex`**
+```powershell
 powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
 ```
 
-Or, from [PyPI](https://pypi.org/project/uv/):
+<br>
 
-```bash
-# With pip.
-pip install uv
+## Shell autocompletion
+
+To enable shell autocompletion for uv commands, run one of the following
+```powershell
+Add-Content -Path $PROFILE -Value '(& uv generate-shell-completion powershell) | Out-String | Invoke-Expression'
 ```
-
-```bash
-# Or pipx.
-pipx install uv
-```
-
-If installed via the standalone installer, uv can update itself to the latest version:
-
-```bash
-uv self update
-```
-
-See the [installation documentation](https://docs.astral.sh/uv/getting-started/installation/) for
-details and alternative installation methods.
